@@ -1,5 +1,6 @@
 # PhotoHelp
-Application d'aide pour la photographie.
+Application d'aide pour la photographie.<br>
+Cette application est compatible format mobile.
 
 <h2> Fonctionnalités</h2>
 
