@@ -8,3 +8,5 @@ Application d'aide pour la photographie.
 - Indicateurs d'Exposition (en fonction des facteurs sélectionnés )
 - Règle du F16 (calcul les ISO et la vitesse en fonction de l'ouverture sélectionnée)
 - Infos utiles (lien vers des notions et informations sur la photo)
+
+<a href="http://sulfehn.free.fr/photo/index.php">Voir l'exemple en ligne</a>
