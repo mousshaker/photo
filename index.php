@@ -664,7 +664,7 @@ include('source.php');
 		
 
 		<div class="footer">			
-			@Mousshk - YoaPli tous droits réservés
+			@Mousshk - YoaPli tous droits réservés - <a href="https://github.com/mousshaker/photo" target="_blank">Télécharger l'application</a>
 		</div>
 
 	</div>
