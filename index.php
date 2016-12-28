@@ -654,6 +654,127 @@ include('source.php');
 			</div>
 			
 		</div>
+
+
+		<!-- Conseils photos -->
+		<div id="<?php echo $aMenu[4][0]; ?>" class="panelDark">
+			<h2><?php echo $aMenu[4][1]; ?></h2>
+			
+			<div>
+				<h5>A quoi penser avant une photo ?</h5>
+				<ul>
+					<li>Le mode de prise de vue (Av, P, Manuel,…)</li>
+					<li>Le mode d’exposition (MULTIZONE, PONDEREE, SPOT)</li>
+					<li>L’exposition (On peut la faire varier de 1 ou 2 IL sans avoir besoin de modifier les réglages, grâce au bouton d’expo - à coté de ISO sur K5)</li>
+					<li>La profondeur de champs (f/2.8 bcp de flou, petite profondeur / f22 beaucoup de netteté et grande profondeur de champs)</li>
+					<li>La MAP (auto ou manuelle)</li>
+					<li>Balance des blancs</li>
+					<li>Format RAW - JPEG ?</li>
+				</ul>
+			</div>
+
+			<div>
+				<h5>Modes de prise de vue</h5>
+				<p>
+					<p1 class="whiteTitle">Tav</p1> [réglage OUV & VIT - auto ISO]</br>
+					Permet de régler l’ouverture et la vitesse de façon indépendante.<br>
+					En fonction des réglages, les ISO s’ajustent automatiquement
+				</p>
+
+				<p>
+					<p1 class="whiteTitle">Av</p1> [réglages OUV - ISO]</br>
+					Permet de régler l’ouverture et les ISO
+					En fonction, la vitesse sera calculée par l'APN
+				</p>
+
+				<p>
+					<p1 class="whiteTitle">P</p1> [réglage OUV, VIT, ISO]</br>
+					Permet de choisir les ISO et de régler l’OUV et la VIT de façon dépendante.<br>
+					On fonction de l’ISO choisi l’APN adapte le 3em facteur en fonction du 2nd.<br>
+					A noter : si, en sélectionnant 1 facteur on atteint la plage maximum du 2nd facteur, alors l’APN empêche d’aller + loin dans la plage du facteur 1.<br>
+					<ul>
+					<li>Molette avant : VITesse -> l’ouverture s’ajustera en fonction.</li>
+					<li>Molette arrière : OUVerture -> la vitesse s’ajustera en fonction.</li>
+					<li>Molette arrière + btn ISO -> réglage des ISO</li>
+					</ul>
+				</p>
+			</div>
+
+			<div>
+				<h5>Types de photos</h5>
+
+				<p1 class="whiteTitle">Paysage lumineux, éclairé</p1>
+				<ul>
+					<li>Objectif 18-55mm WR</li>
+					<li>MAP sur l'Infini</li>
+					<li>Mode TaV ou P</li>
+					<li>Ouverture : F8 en moyenne</li>
+					<li>Mode expo : Multizones</li>
+				</ul>
+
+				<p1 class="whiteTitle">Coucher de soleil</p1>
+				<ul>
+					<li>Objectif 17-50mm f/2.8</li>
+					<li>MAP sur l'Infini</li>
+					<li>Mode Av ou P</li>
+					<li>Ouverture : F11 - F16 en moyenne</li>
+					<li>ISO 100</li>
+					<li>Vitesse : 1/200 (préférer Av et faire confiance au calcul de l’appareil)</li>
+					<li>Mode expo : Multizones</li>
+				</ul>
+
+				<p1 class="whiteTitle">Nuit / astro</p1>
+				<ul>
+					<li>Objectif 17-50mm f/2.8</li>
+					<li>MAP sur l'Infini</li>
+					<li>Mode Manuel</li>
+					<li>Ouverture : F2.8</li>
+					<li>ISO : faible (100)</li>
+					<li>Vitesse : pause longue (« heure bleue »  15min après coucher de soleil)</li>
+					<li>Mode expo : Multizones</li>
+				</ul>
+
+				<p1 class="whiteTitle">Nuit ville</p1>
+				<ul>
+					<li>Objectif 17-50mm f/2.8</li>
+					<li>MAP auto</li>
+					<li>Mode Av</li>
+					<li>Ouverture : f/8 - f/11</li>
+					<li>ISO : 100 - 200</li>
+					<li>Vitesse : laisser l’APN choisir OU pause longue pour effet « filer de lumière)</li>
+					<li>Mode expo : Multizones</li>
+				</ul>
+
+
+				<p1 class="whiteTitle">Voie lactée (Juin - septembre, bonnes parties lumineuses)</p1>
+				<ul>
+					<li>Objectif 17-50mm f/2.8</li>
+					<li>MAP sur l'Infini</li>
+					<li>Mode Manuel</li>
+					<li>Ouverture : F2.8</li>
+					<li>ISO :  3200</li>
+					<li>Vitesse : 30"</li>
+					<li>Mode expo : Pondérée</li>
+				</ul>
+
+				<p1 class="whiteTitle">Lune</p1>
+				<ul>
+					<li>Objectif 17-50mm f/2.8</li>
+					<li>MAP sur l'Infini</li>
+					<li>Mode Manuel</li>
+					<li>Ouverture : f/8 au moins voir f/10</li>
+					<li>Vitesse : 20"</li>
+					<li>ISO : 800 - 1600</li>
+					<li>Mode expo : SPOT</li>
+				</ul>
+
+				
+
+			</div>
+
+		</div>
+
+		<!-- Panel logo -->
 		<div name="logo-illu" class="center panelLight">
 			<a href="index.php"> 
 				<img src="logo.png" class="logo">

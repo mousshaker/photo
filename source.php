@@ -47,7 +47,8 @@ Le cercle de confusion varie suivant les APN, soit APS-C ou full frame, de mani�
 		0 => array('hyperfocal','Hyperfocale'),
 		1 => array('speedShot','Vitesse minimale'),
 		2 => array('expo', 'Exposition'),
-		3 => array('f16', 'Règle du F/16')
+		3 => array('f16', 'Règle du F/16'),
+		4 => array('conseil', 'Conseils photo')
 		);
 
 

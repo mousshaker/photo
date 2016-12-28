@@ -64,6 +64,16 @@ h4 {
 	margin-bottom: 15px;
 }
 
+h5 {
+	letter-spacing:1px;
+	font-variant:small-caps;
+	font-weight:bold;
+	font-size:1.5em;
+	margin-top:30;
+	margin-bottom: 10px;
+}
+
+
 
 /** VERSIONS MOBILE - TABLETTE **/
 @media (max-width: 767px){
@@ -276,9 +286,8 @@ a.to_nav:focus {
     text-decoration: none;
 }
 
-ol, ul {
-    list-style: none;
-}
+
+
 
 
 /** INPUT **/
@@ -611,6 +620,11 @@ th{
     color:#0000ff;
     font-size:24px;
     cursor:pointer;
+}
+
+.whiteTitle{
+	font-weight: bold;
+	color: #fff;
 }
 
 .wrapper {
