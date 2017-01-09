@@ -39,7 +39,7 @@ Le cercle de confusion varie suivant les APN, soit APS-C ou full frame, de mani√
 	$cDc = 0.016; // pour PENTAX K5(D/1730)
 	//$cDc = 0.020; // pour PENTAX K5(D/1440)
 
-	$aFocal = array('17','20','24','28','35','50','70','80','100','135','150','200','210','300');
+	$aFocal = array('10','17','20','24','28','35','50','70','80','100','135','150','200','210','300');
 	$aDiaph = array('1.4','1.8','2','2.8','4','5.6','8','11','16','22','32','45');
 
 	### Elements du MENU ####
