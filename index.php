@@ -31,7 +31,9 @@ include('source.php');
 à l'ouverture de la page -->
 <meta name="viewport" content="width=device-width, maximum-scale=1"/>
 <!-- Inclusion de l'icone d'onglet -->
-<link rel="shortcut icon" type="image/x-icon" href="icon.ico" />
+    <link rel="shortcut icon" type="image/x-icon" href="icon.ico" />
+<!-- Inclusion de typos googleFont -->
+    <link href="https://fonts.googleapis.com/css?family=Gruppo|Revalia" rel="stylesheet">
 
 <title>PhotoHelp - YoaPli</title>
 </head>
@@ -663,50 +665,24 @@ include('source.php');
 			<div>
 				<h5>A quoi penser avant une photo ?</h5>
 				<ul>
+                    <li>Le type de photos que vous souhaitez faire. C'est en fonction de lui que tous les autres éléments seront choisis.</li>
 					<li>Le mode de prise de vue (Av, P, Manuel,…)</li>
 					<li>Le mode d’exposition (MULTIZONE, PONDEREE, SPOT)</li>
-					<li>L’exposition (On peut la faire varier de 1 ou 2 IL sans avoir besoin de modifier les réglages, grâce au bouton d’expo - à coté de ISO sur K5)</li>
+					<li>La correction d’exposition (On peut la faire varier de 1 ou 2 IL sans avoir besoin de modifier les réglages, grâce au bouton d’expo - à coté de ISO sur K5)</li>
 					<li>La profondeur de champs (f/2.8 bcp de flou, petite profondeur / f22 beaucoup de netteté et grande profondeur de champs)</li>
-					<li>La MAP (auto ou manuelle)</li>
-					<li>Balance des blancs</li>
+					<li>La MAP (Mise au point auto ou manuelle)</li>
+					<li>Balance des blancs (WB)</li>
 					<li>Format RAW - JPEG ?</li>
 				</ul>
 			</div>
-
-			<div>
-				<h5>Modes de prise de vue</h5>
-				<p>
-					<p1 class="whiteTitle">Tav</p1> [réglage OUV & VIT - auto ISO]</br>
-					Permet de régler l’ouverture et la vitesse de façon indépendante.<br>
-					En fonction des réglages, les ISO s’ajustent automatiquement.
-				</p>
-
-				<p>
-					<p1 class="whiteTitle">Av</p1> [réglages OUV - ISO]</br>
-					Permet de régler l’ouverture et les ISO.<br>
-					En fonction, la vitesse sera calculée par l'APN.
-				</p>
-
-				<p>
-					<p1 class="whiteTitle">P</p1> [réglage OUV, VIT, ISO]</br>
-					Permet de choisir les ISO et de régler l’OUV et la VIT de façon dépendante (lorsque vous réglez l'OUVerture, la VITesse s'adapte, et vis et versa).<br>
-					On fonction de l’ISO choisi, l’APN adapte le 3ème facteur en fonction du 2nd.<br>
-					A noter : si en sélectionnant 1 facteur on atteint la plage maximum du 2nd facteur, alors l’APN empêche d’aller + loin dans la plage du facteur 1.<br>
-					<ul>
-					<li>Molette avant : VITesse -> l’ouverture s’ajustera en fonction.</li>
-					<li>Molette arrière : OUVerture -> la vitesse s’ajustera en fonction.</li>
-					<li>Molette arrière + btn ISO -> réglage des ISO</li>
-					</ul>
-				</p>
-			</div>
-
-			<div>
-				<h5>Types de photos</h5>
+			
+			<div id="pictureMode">
+				<h5>Types de photos (conditions lumineuses)</h5>
 
 				<p1 class="whiteTitle">Paysage lumineux, éclairé</p1>
 				<ul>
 					<li>Objectif grand angle</li>
-					<li>MAP sur l'Infini</li>
+					<li>MAP sur l'Infini (hyperfocale)</li>
 					<li>Mode TaV ou P</li>
 					<li>Ouverture : F8 en moyenne</li>
 					<li>Mode expo : Multizones</li>
@@ -715,18 +691,18 @@ include('source.php');
 				<p1 class="whiteTitle">Coucher de soleil</p1>
 				<ul>
 					<li>Objectif grand angle</li>
-					<li>MAP sur l'Infini</li>
+					<li>MAP sur l'Infini (hyperfocale)</li>
 					<li>Mode Av ou P</li>
 					<li>Ouverture : F11 - F16 en moyenne</li>
 					<li>ISO 100</li>
 					<li>Vitesse : 1/200 (privilégier l'OUVerture et faire confiance au calcul de l’appareil pour la VITesse)</li>
-					<li>Mode expo : Multizones</li>
+					<li>Mode expo : Multizones / Pondérée</li>
 				</ul>
 
 				<p1 class="whiteTitle">Nuit / astro</p1>
 				<ul>
 					<li>Objectif grande ouverture (f/2.8 - f/1.4)</li>
-					<li>MAP sur l'Infini</li>
+					<li>MAP sur l'Infini (hyperfocale)</li>
 					<li>Mode Manuel</li>
 					<li>Ouverture : F2.8</li>
 					<li>ISO : faible (100)</li>
@@ -743,14 +719,14 @@ include('source.php');
 					<li>Ouverture : f/8 - f/11</li>
 					<li>ISO : 100 - 200</li>
 					<li>Vitesse : laisser l’APN choisir OU pause longue pour effet « filer de lumière)</li>
-					<li>Mode expo : Multizones</li>
+					<li>Mode expo : Multizones / Pondérée (suivant le sujet)</li>
 				</ul>
 
 
 				<p1 class="whiteTitle">Voie lactée</p1>
 				<ul>
 					<li>Objectif grande ouverture (f/2.8 - f/1.4)</li>
-					<li>MAP sur l'Infini</li>
+					<li>MAP sur l'Infini (hyperfocale)</li>
 					<li>Mode Manuel</li>
 					<li>Ouverture : F2.8</li>
 					<li>ISO :  3200</li>
@@ -762,18 +738,135 @@ include('source.php');
 				<p1 class="whiteTitle">Lune</p1>
 				<ul>
 					<li>Téléobjectif</li>
-					<li>MAP sur l'Infini</li>
+					<li>MAP sur l'Infini (hyperfocale)</li>
 					<li>Mode Manuel</li>
 					<li>Ouverture : f/8 au moins voir f/10</li>
 					<li>Vitesse : 20"</li>
 					<li>ISO : 800 - 1600</li>
 					<li>Mode expo : SPOT</li>
 				</ul>
-
-				
-
 			</div>
 
+			<div id="vueMode">
+				<h5>Modes de prise de vue</h5>
+                <p>
+					<p1 class="whiteTitle">Tv/S</p1> - Priorité VIT</br>
+					[réglages VIT] <br>
+					Permet de régler la vitessee et les ISO.<br>
+					En fonction, l'ouverture sera calculée par l'APN.
+				</p>
+				<p>
+					<p1 class="whiteTitle">Av/A</p1> - Priorité OUV</br>
+				    [réglages OUV - ISO] <br>
+					Permet de régler l’ouverture et les ISO.<br>
+					En fonction, la vitesse sera calculée par l'APN.
+				</p>
+				<p>
+					<p1 class="whiteTitle">Tav</p1> - Priorité OUV et VIT </br>
+					[réglage OUV & VIT - auto ISO] <br>
+					Permet de régler l’ouverture et la vitesse de façon indépendante.<br>
+					En fonction des réglages, les ISO s’ajustent automatiquement. <br>
+					C'est un bon compromis entre le mode M (tout manuel) et les deux modes précédants. <br>
+					Il vous permettra une certaine autonomie pour vous entrainer à appréhender les réglages, tout en jouant automatiquement sur les ISO pour compenser vos erreurs d'exposition : 1 photo pleine de "bruit" signifiera que vos réglages d'expo étaient trop sombres, forçant l'APN à tirer au maximum dans ses ISO pour ajouter de la luminosité. <br>
+					Malheureusement, tous les APN ne proposent pas ce mode...
+				</p>
+				<p>
+					<p1 class="whiteTitle">M</p1> - Mode Manuel</br>
+					[réglages OUV + VIT + ISO] <br>
+					Permet de régler manuellement les 3 facteurs.<br>
+					Si vous n'avez qu'une molette sur votre APN, oubliez ce mode là, car ayant 2 (voire 3) paramètres à régler vous allez perdre un temps fou à configurer votre unique molette à chaque prise de vue .
+				</p>
+				<p>
+					<p1 class="whiteTitle">P</p1> - Mode Programme</br>
+					[réglage OUV, VIT, ISO] <br>
+					Permet de choisir les ISO et de régler l’OUV et la VIT de façon dépendante (lorsque vous réglez l'OUVerture, la VITesse s'adapte, et vis et versa).<br>
+					On fonction de l’ISO choisi, l’APN adapte le 3ème facteur en fonction du 2nd.<br>
+					A noter : si en sélectionnant 1 facteur on atteint la plage maximum du 2nd facteur, alors l’APN empêche d’aller + loin dans la plage du facteur 1. Certains APN feront clignoter un "hight" ou "low" pour vous prévenir que vous atteignez la limite max ou mini du couple d'expo<br>
+					<ul>
+					<li>Molette avant : VITesse -> l’ouverture s’ajustera en fonction.</li>
+					<li>Molette arrière : OUVerture -> la vitesse s’ajustera en fonction.</li>
+					<li>Molette arrière + btn ISO -> réglage des ISO</li>
+					</ul>
+				</p>
+			</div>
+			
+			<div id="exposureMode">
+				<h5>Modes d'exposition</h5>
+               <table>
+                   <tr>
+                       <td><img src="expo_multizone.jpg" class="illuSmall"/></td>
+                       <td class="tdLeft">
+                            <p1 class="whiteTitle">Matricielle / Multizone</p1><br>
+                            Le contrôle de l'intensité lumineuse s'effectuera sur l'intégralité de l'image. <br>
+                            Un certain nombre de zones de mesure (selon le modèle) servent de références.<br>
+                            <u>Type de photos</u> : paysages / architecture (tous types de photos où le sujet occupe la quasi totalité du cadre).
+                        </td>
+                   </tr>
+                   <tr>
+                       <td><img src="expo_ponderee.jpg" class="illuSmall"/></td>
+                       <td class="tdLeft">
+                           <p1 class="whiteTitle">Pondérée</p1><br>
+					        Le contrôle de l'intensité lumineuse s'effectuera sur les sujets proches du centre de l'image. <br>
+					        L'appareil ne tient pas compte des points s'approchant des bords de l'image.<br>
+					        <u>Type de photos</u> : intérieur / extérieur (tous types de photos où le/les sujet(s) occupe(nt) une partie de l'image).
+                       </td>
+                   </tr>
+                   <tr>
+                       <td><img src="expo_spot.jpg" class="illuSmall"/></td>
+                       <td class="tdLeft">
+                           <p1 class="whiteTitle">Spot</p1><br>
+					        Le contrôle de l'intensité lumineuse s'effectuera sur des zones de faible superficie. <br>
+					        Il permet ainsi d'exposer correctement des sujets de petite taille dans des situations lumineuses difficiles.<br>
+					        <u>Type de photos</u> : visage à contre-jour, un sujet très clair sur un fond sombre ou inversement... Ce réglage est donc très utile pour saisir des détails dans des images très contrastées.
+                       </td>
+                   </tr>
+               </table>
+                <div class="center" id="imgExpo">
+                    <img src="expo_modes.jpg" width="300px"/>
+                </div>
+            </div>
+            
+            <div id="exposurecorrect">
+                <h5>Correction d'exposition</h5><img src="expo_button.jpg"/>
+                <p>
+                    Lorsque vous prenez une photo, vérifiez toujours votre exposition sur l'histogramme (l'écran de l'APN pourra toujours vous tromper, en fonction des conditions de lumières dans lesquelles vous êtes). <br>
+                    En fonction de celui-ci, vous pourrez corriger l'exposition de 1 ou 2 IL sans avoir à changer vos réglages. <br>
+                    L'idéal est de se rapprocher le plus possible d'un histogramme ressemblant à une montagne au centre.
+                </p>
+                
+                <table>
+                    <tr>
+                        <td><img src="expo_down.jpg" class="illuSmall"/></td>
+                        <td><img src="expo_good.jpg" class="illuSmall"/></td>
+                        <td><img src="expo_up.jpg" class="illuSmall"/></td>
+                    </tr>
+                    <tr>
+                        <th>Sous-exposition</th>
+                        <th>Exposition idéale</th>
+                        <th>Sur-exposition</th>
+                    </tr>
+                </table> 
+                <p>
+                    Si vous avez une montagne d'avantage élevée à gauche, vous êtes sous-exposé. Il faudra monter de 1 à 2 IL. <br>
+                    Si vous avez une montagne d'avantage élevée à droite, vous êtes sur-exposé. Il faudra baisser de 1 à 2 IL.
+                </p>
+               <p>
+                    Pour corriger l'exposition, vous devrez appuyer sur le bouton ressemblant à un carré noir et blanc avec un + et un -, tout en tournant votre molette. <br>
+                    A l'intérieur de votre viseur, vous devriez voir ce symbole avec une échelle de mesure et un curseur qui se déplace en fonction du sens où vous tournez votre molette.
+                </p>
+                <div class="center" id="imgExpo">
+                    <img src="expo_rule.png" class="illu"/>
+                </div>
+                <p>
+                    Notons que les graphiques si dessus sont volontairement les extrêmes pour bien faire comprendre la lecture de l'histogramme. <br>
+                    Si vous avez un pic à gauche, vous êtes complètement sous-exposé. Votre image sera très sombre. <br>
+                    Si vous avez un pic à droite, vous êtes complètement sur-exposé. Vos blancs seront "cramés" et irrécupérables en post-traitement. <br>
+                    En d'autres termes, si vous avez un histogramme aussi extrême, le bouton d'exposition ne suffira pas à rattraper l'erreur. Il vous faudra modifier vos réglages avant tout.
+                    
+                    
+                </p>       
+            </div>
+            
 		</div>
 
 		<!-- Panel logo -->
@@ -792,7 +885,8 @@ include('source.php');
 		
 
 		<div class="footer">			
-			@Mousshk - YoaPli tous droits réservés - <a href="https://github.com/mousshaker/photo" target="_blank">Télécharger l'application</a>
+            <a href="http://sulfehn.free.fr/yoalad" target="_blank">@YOALAD </a> - Tous droits réservés - <a href="https://github.com/whoroot/photo" target="_blank">Télécharger l'application</a> - <?php echo date(Y); ?>
+            | <a href="mailto:yoa@hmamail.com?subject=[YoaPhoto] - Message depuis le site"><?php echo 'Contacter le développeur'; ?> </a>
 		</div>
 
 	</div>

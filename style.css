@@ -6,8 +6,7 @@ h1 {
 	text-align:center;
 	/*text-decoration: underline;*/
 	color: #3b92cd;
-	font-family:"trebuchet ms", verdana, sans-serif;
-		font-variant:small-caps;
+    font-family: 'Revalia', cursive;
 	letter-spacing:1px;
 	font-weight:bold;
 	font-size:22px;
@@ -220,8 +219,9 @@ h5 {
 
 
 body {
-	font-family: Verdana, Geneva, sans-serif;
-	font-size: 0.6em;
+	/*font-family: Verdana, Geneva, sans-serif;*/
+    font-family: 'Gruppo', cursive;
+	font-size: 80%;
 	/*color: #85afc7;*/
 	color: #afbcce;
 	background-image:url(background2.jpg);
@@ -387,6 +387,9 @@ th{
 	background-color: #ccc;
 	color:#1c1d1e;
 }
+.tdLeft{
+    text-align: left;
+}
 
 
 
@@ -407,6 +410,10 @@ th{
 	margin-bottom: 10px;
 	margin-right: auto;
 	margin-left: auto;
+}
+
+.illuSmall{
+    width: 100px;
 }
 .ligneSeparator{
 	/*border-bottom: 0.2em solid #06080b;*/
@@ -611,10 +618,9 @@ th{
 	text-align: center;
 }
 
-.planeteImage{
-	padding-top: 10px;
+.cellCenter{
+    margin: auto;
 }
-
 .bouton
 {
     color:#0000ff;
